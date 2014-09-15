@@ -7,12 +7,38 @@
 //
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[])
+int swap(int &rx, int &ry);
+int main(void)
 {
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int x =9;
+    int y = 10;
+    
+    cout << "main before swap: " << x <<"......" << y <<endl;
+    
+    swap(x, y);
+    
+     cout << "main after swap: " << x <<"......" << y << endl;
+    
+    
+
     return 0;
 }
 
+int swap(int &rx, int &ry)
+{
+    
+    int temp;
+    cout << "before swap " << rx <<"......" << ry <<endl;
+    
+    temp = rx;
+    rx = ry;
+    ry = temp;
+    
+    cout << "after swap " << rx <<"......" << ry << endl;
+    
+    return 0;
+    
+}
